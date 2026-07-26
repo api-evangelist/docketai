@@ -1,0 +1,47 @@
+<!-- generated: '2026-07-18' -->
+<!-- method: searched -->
+<!-- source: https://www.docket.io/llms.txt -->
+
+# Docket | AI Agents for Marketing & Sales
+
+> Generate 15% more pipeline and improve seller efficiency by 33% with Docket's powerful, pre-built AI marketing agents.
+
+Docket provides AI-driven solutions for sales enablement, demand generation, and marketing automation. The following information outlines the core platform capabilities, industry solutions, and extensive knowledge bases for sales engineering.
+
+## Platform & Core Technology
+- [Docket Platform Overview](https://www.docket.io/platform): The central hub for Docket's AI agent technology.
+- [Precision Engine](https://www.docket.io/platform/precision): Details on the retrieval augmented generation (RAG) and accuracy engine.
+- [Security & Trust](https://www.docket.io/platform/security-and-trust): Compliance, data privacy, and security standards.
+- [Autonomous Marketing Agent](https://www.docket.io/autonomous-marketing-agent): Capabilities of the autonomous agent for full-cycle marketing tasks.
+- [Website Concierge Agent](https://www.docket.io/marketing-agent-for-websites): AI agent details for inbound website lead conversion.
+
+## Solutions & Use Cases
+- [Sales Enablement](https://www.docket.io/solutions/sales-enablement): Tools for account executives and pre-sales.
+- [Demand Generation](https://www.docket.io/solutions/ai-for-demand-generation-docket): AI workflows for generating and qualifying leads.
+- [Digital Marketing](https://www.docket.io/solutions/ai-for-digital-marketing): Agents for content and campaign operations.
+- [Manufacturing Industry Solution](https://www.docket.io/solutions/ai-for-manufacturing-docket): Specific use cases for the manufacturing sector.
+
+## Key Resources & Knowledge Base
+- [Blog](https://www.docket.io/blog): Insights on AI sales trends, agentic marketing, and B2B strategies.
+- [Glossary](https://www.docket.io/glossary): Definitions of key terms including Cognitive Architecture, Sales Knowledge Lake, and AI Sales Engineers.
+- [Case Studies](https://www.docket.io/case-study/how-saas-company-boosted-win-rate-and-cut-costs): Real-world performance metrics and customer success stories.
+- [Videos](https://www.docket.io/videos): Visual guides and webinars on using AI for sales.
+
+## Sales Engineering & Prompt Library
+Docket hosts a significant library of prompt engineering guides and objection handling scripts.
+- [ChatGPT Prompts for Sales](https://www.docket.io/chat-gpt-prompts-for-sales/automating-sales-outreach): A collection of prompts for SDRs, AEs, and Sales Leaders.
+- [ChatGPT Prompts for Marketing](https://www.docket.io/chat-gpt-prompts-for-marketing/chatgpt-prompts-for-content-marketing): Prompts for CMOs, Demand Gen, and Content creators.
+- [Sales Objection Handling](https://www.docket.io/sales-objections/its-too-expensive): Strategies for overcoming common objections like budget, timing, and competition.
+
+## Integrations
+- [Integrations Library](https://www.docket.io/integrations): Full list of connectors.
+- [Salesforce](https://www.docket.io/integrations/salesforce): CRM integration details.
+- [HubSpot](https://www.docket.io/integrations/hubspot): Marketing automation integration.
+- [Slack](https://www.docket.io/integrations/slack): Conversational interface integration.
+- [Gong](https://www.docket.io/integrations/gong): Call intelligence integration.
+
+## Company & Legal
+- [About Us](https://www.docket.io/about-us): Company mission and background.
+- [Privacy Policy](https://www.docket.io/privacy-policy): User data protection policies.
+- [Terms & Conditions](https://www.docket.io/terms-and-conditions): Usage terms.
+- [Subprocessors](https://www.docket.io/legal/subprocessors): List of third-party data processors.

@@ -1,7 +1,18 @@
 aid: docketai
-name: Docketai
-description: Docketai is a company surfaced as a portfolio company of mayfield and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+name: Docket
+description: >-
+  Docket (formerly Docket AI, docketai.com) is an AI-powered marketing and sales
+  agent platform that engages website visitors in real, substantive conversations
+  to qualify leads, book meetings, and generate pipeline without a first-touch SDR.
+  Its Sales Knowledge Lake ingests 100+ data sources and a custom cognitive /
+  retrieval-augmented architecture powers autonomous marketing and website-concierge
+  agents that hold voice and text conversations in 40+ languages. Docket deploys via
+  a JavaScript snippet ("no developer required") and syncs to the go-to-market stack
+  through native connectors for Salesforce, HubSpot, Gong, Slack, Google Drive,
+  Notion, SharePoint and more. The company raised a $15M Series A and is backed by
+  Mayfield. Docket publishes no public REST API or developer portal; it is an
+  agent-and-integration product, so this profile captures its identity, integration
+  surface, published llms.txt, and security/compliance posture.
 url: https://raw.githubusercontent.com/api-evangelist/docketai/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +20,30 @@ x-backed-by:
 - mayfield
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://www.docket.io/favicon.ico
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- AI Agents
+- Sales Enablement
+- Demand Generation
+- Marketing Automation
+- Conversational AI
+- Lead Qualification
+- Go-To-Market
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,4 +52,29 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://docketai.com
+  url: https://www.docket.io/
+- type: Blog
+  url: https://www.docket.io/blog
+- type: Pricing
+  url: https://www.docket.io/pricing
+- type: TermsOfService
+  url: https://www.docket.io/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.docket.io/privacy-policy
+- type: Integrations
+  url: https://www.docket.io/integrations
+- type: LLMsTxt
+  url: llms/docketai-llms.txt
+- type: TrustCenter
+  url: https://security.docketai.com/
+- type: Compliance
+  url: https://www.docket.io/platform/security-and-trust
+- type: DomainSecurity
+  url: security/docketai-domain-security.yml
+- type: TrustCenter
+  url: security/docketai-trust-center.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

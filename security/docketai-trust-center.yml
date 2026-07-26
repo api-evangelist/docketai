@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.docket.io/platform/security-and-trust
+url: https://security.docketai.com/
+trust_platform: Trust Vault (hosted trust portal)
+certifications:
+- SOC 2 Type 1
+- SOC 2 Type 2
+- ISO 27001
+- GDPR
+evidence:
+- source: https://www.docket.io/platform/security-and-trust
+  quote: "Docket is SOC 2 Type 1, SOC 2 Type 2, ISO 27001 and GDPR certified."
+- source: https://security.docketai.com/
+  keywords:
+  - trust vault
+  - trust portal
+notes: >-
+  Trust portal is hosted on a separate registrable domain (security.docketai.com)
+  than the primary marketing site (www.docket.io); the automated probe keys on the
+  Website domain and did not cross to it, so this artifact was authored from the
+  manually verified security-and-trust page and live trust portal.
