@@ -1,0 +1,107 @@
+generated: '2026-08-13'
+method: probed
+source: live GET of the /.well-known/ discovery surface on every Docket host
+checked: '2026-08-13'
+
+# Five hosts were probed. Only the MCP host serves any well-known document; the
+# marketing site (Webflow) answers every /.well-known/* path with an HTML
+# "Invalid .well-known request" page, and the application host answers with its
+# Next.js 404 shell. Neither is a document.
+
+hosts:
+  - host: https://demand-mcp.app.docketai.com
+    role: MCP server
+    documents:
+      - path: /.well-known/oauth-protected-resource/mcp   # RFC 9728
+        status: 200
+        content_type: application/json
+        file: docketai-oauth-protected-resource.json
+      - path: /.well-known/oauth-authorization-server     # RFC 8414
+        status: 200
+        content_type: application/json
+        file: docketai-oauth-authorization-server.json
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/oauth-authorization-server/mcp
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/mcp.json
+        status: 404
+
+  - host: https://www.docket.io
+    role: marketing site (Webflow)
+    note: >-
+      Every /.well-known/* path returns HTTP 404 with an HTML body reading
+      "Invalid .well-known request". No document is served.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+
+  - host: https://app.docketai.com
+    role: application
+    note: 'Next.js SPA; every /.well-known/* path returns the 404 HTML shell.'
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+
+  - host: https://docketai.com
+    role: legacy brand domain (serves the same Webflow site as docket.io)
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+
+  - host: https://security.docketai.com
+    role: trust portal
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+
+summary:
+  documents_served: 2
+  security_txt: false
+  openid_configuration: false
+  api_catalog: false
+  ai_plugin: false
+  agent_card: false
+
+notes: >-
+  No security.txt is served on any host, so no SecurityTxt pointer is emitted. No
+  agent card was found at either the canonical /.well-known/agent-card.json or the
+  legacy /.well-known/agent.json on any host, so no a2a/ artifact was authored.

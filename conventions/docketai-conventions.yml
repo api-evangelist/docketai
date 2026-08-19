@@ -1,0 +1,134 @@
+generated: '2026-08-13'
+method: searched
+source: https://help.docket.io/
+docs:
+  - https://help.docket.io/articles/9442251006-using-the-aiseller-javascript-api
+  - https://help.docket.io/articles/3995218053-dynamic-context-variable-reference
+  - https://help.docket.io/articles/6670513517-passing-context-via-url-parameters-to-marketing-agents
+  - https://help.docket.io/articles/8225942528-connect-docket-demand-mcp
+
+# Docket exposes two developer surfaces and they have completely different semantics.
+# Both are captured here because neither is described by a machine-readable contract.
+
+surfaces:
+  - id: demand-mcp
+    kind: remote MCP (JSON-RPC over Streamable HTTP)
+    endpoint: https://demand-mcp.app.docketai.com/mcp
+    audience: agents and MCP clients
+    direction: read-only, outbound from Docket
+  - id: aiseller-js
+    kind: browser JavaScript API on the deployed widget
+    global: window.AISeller
+    audience: the customer's own website code
+    direction: write-only, inbound context into Docket
+
+authentication:
+  demand-mcp:
+    style: OAuth 2.0 bearer token in the Authorization header
+    detail: see authentication/docketai-authentication.yml
+  aiseller-js:
+    style: none
+    detail: >-
+      The widget script is bound to one agent and one whitelisted domain. There is no
+      key, token or signature in the browser API; authorization is domain whitelisting
+      plus optional IP access rules configured in the Docket application.
+    docs: https://help.docket.io/articles/2477734088-whitelisting-domains-for-your-marketing-agent-widget
+
+idempotency:
+  supported: false
+  header: null
+  note: >-
+    No idempotency key, request-id or replay-safety contract is documented on either
+    surface. setContext() has replace semantics — "Each call replaces the pending
+    encrypted context payload" — which makes repeated calls convergent, but that is
+    last-write-wins, not an idempotency contract, so no Idempotency pointer is emitted.
+
+pagination:
+  supported: unknown
+  note: >-
+    The MCP tool schemas are auth-gated (tools/list returns 401), so any cursor or page
+    parameters cannot be observed. Docket documents narrowing by date range, agent,
+    visitor or account in prose only.
+
+versioning:
+  style: none-published
+  detail: see lifecycle/docketai-lifecycle.yml
+
+error_envelope:
+  demand-mcp:
+    format: OAuth 2.0 error object (RFC 6749 / RFC 6750 style), application/json
+    shape: '{ "error": "<code>", "error_description": "<human message>" }'
+    observed_status: 401
+    detail: see errors/docketai-problem-types.yml
+  aiseller-js:
+    format: resolved Promise result object (never a thrown error)
+    shape: '{ success: true | false, message: "Context stored successfully" }'
+    detail: >-
+      setContext() and resetContext() both return a Promise resolving to this object.
+      Callers are told to branch on result.success rather than catch.
+
+rate_limit_signaling:
+  documented: false
+  detail: see rate-limits/docketai-rate-limits.yml
+
+context_ingestion:
+  # The one genuinely specified request contract Docket publishes.
+  javascript:
+    method: 'window.AISeller.setContext(data)'
+    value_types: [string, number, boolean, 'null']
+    rejected_types: [object, array, file, function, date, undefined]
+    shape: flat key/value only — nesting is rejected
+    encryption: 'context is encrypted in the browser and stored temporarily until the conversation starts'
+    clearing: 'the pending context is cleared once the backend acknowledges it'
+    reset: 'window.AISeller.resetContext() replaces pending context with an empty object'
+  url_parameters:
+    prefix: 'ctx_'
+    example: '?ctx_company_name=Northstar%20Labs&ctx_plan=Enterprise&ctx_is_customer=true'
+    coercion: >-
+      URL values are ALWAYS ingested as strings — ctx_is_customer=true yields the
+      string "true", not a boolean, and ctx_employeeCount=500 yields "500". This is the
+      one type trap on the surface and Docket states it explicitly.
+    mapping: 'the ctx_ prefix is stripped before the key is matched to a configured variable'
+  binding:
+    detail: >-
+      Keys must match, case-sensitively, the variables configured per agent under
+      Agent > Dynamic Context Ingestion. An unconfigured key is not used by the agent.
+    naming_guidance:
+      - 'Match names exactly between Docket and your website code; capitalization is significant.'
+      - 'Use stable names such as name, company_name, plan, is_customer.'
+      - 'Avoid spaces and punctuation that complicate JavaScript and URL usage.'
+      - 'Do not encode secrets or sensitive details in a variable name.'
+      - 'Do not rename a production variable without updating every website implementation that sends it.'
+    security_guidance: https://help.docket.io/articles/4726374778-security-guidelines-for-passing-visitor-context
+
+widget_control:
+  ordering_rule: 'call the API only after the Docket script has loaded'
+  readiness_check: 'if (!window.AISeller?.setContext || !window.AISeller?.showAndConnect) { ... }'
+  methods:
+    - name: 'window.AISeller.setContext(data)'
+      does: Encrypts and stores visitor context for the next conversation.
+      returns: 'Promise<{success, message}>'
+    - name: 'window.AISeller.resetContext()'
+      does: Replaces pending context with an empty object.
+      returns: 'Promise<{success, message}>'
+    - name: 'window.AISeller.show()'
+      does: Makes the widget visible without starting a conversation.
+    - name: 'window.AISeller.hide()'
+      does: Hides the widget without explicitly ending a conversation.
+    - name: 'window.AISeller.toggle(show)'
+      does: Shows or hides the widget. Omit show to toggle the current state.
+    - name: 'window.AISeller.connect(options)'
+      does: Starts the agent connection without changing widget visibility.
+    - name: 'window.AISeller.showAndConnect(options)'
+      does: Shows the widget and starts the agent connection.
+    - name: 'window.AISeller.hideAndDisconnect()'
+      does: Disconnects the agent and hides the widget.
+
+cross_links:
+  authentication: authentication/docketai-authentication.yml
+  scopes: scopes/docketai-scopes.yml
+  errors: errors/docketai-problem-types.yml
+  lifecycle: lifecycle/docketai-lifecycle.yml
+  rate_limits: rate-limits/docketai-rate-limits.yml
+  components: components/docketai-components.yml
+  mcp: mcp/docketai-mcp.yml

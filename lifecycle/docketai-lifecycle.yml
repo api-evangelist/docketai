@@ -1,0 +1,69 @@
+generated: '2026-08-13'
+method: searched
+source: https://status.docket.io/
+
+status_page:
+  url: https://status.docket.io/
+  platform: Better Stack (Better Uptime)
+  title: DocketAI status
+  observed: '2026-08-13'
+  http_status: 200
+  state_at_observation: All services are online
+  components:
+    - group: Docket Stack
+      name: Web Platform
+      uptime_30d: '100%'
+      state: Operational
+    - group: Docket Stack
+      name: Slack App
+      uptime_30d: '100%'
+      state: Operational
+    - group: Docket Stack
+      name: Microsoft Teams App
+      uptime_30d: '100%'
+      state: Operational
+  sections: [Status, Maintenance, Previous incidents, Get in touch]
+  note: >-
+    The status page monitors the web platform and the two chat apps. The Docket Demand
+    MCP endpoint (demand-mcp.app.docketai.com) is NOT a listed component, so an agent
+    integrator has no uptime signal for the only machine-callable surface Docket ships.
+
+versioning:
+  scheme: none-published
+  current: null
+  docs: null
+  note: >-
+    No API version appears in the MCP endpoint path, no version header is documented,
+    and no versioning policy page exists. The help centre articles carry a
+    "Last updated" date instead of a version.
+
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: >-
+    No deprecation or sunset policy is published. The help centre does document an
+    agent-level lifecycle (Active / Draft / Archived agents) but that is product state,
+    not API deprecation policy. No Deprecation pointer is emitted.
+
+sla:
+  url: null
+  uptime_target: null
+  note: >-
+    No public SLA. Docket's pricing page lists "custom SLA" as an Enterprise-tier
+    inclusion, so any commitment is contractual and not published.
+  source: https://www.docket.io/pricing
+
+release_notes:
+  url: null
+  probed:
+    - url: https://www.docket.io/changelog
+      status: 404
+    - url: https://www.docket.io/release-notes
+      status: 404
+    - url: https://www.docket.io/whats-new
+      status: 404
+  note: >-
+    No dated changelog or release-notes feed was found, so no changelog/ artifact was
+    written.
+
+deprecated_operations: []

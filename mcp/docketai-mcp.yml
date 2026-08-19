@@ -1,0 +1,96 @@
+generated: '2026-08-13'
+method: searched
+source: https://help.docket.io/articles/8225942528-connect-docket-demand-mcp
+status: published
+
+server:
+  name: Docket Demand MCP
+  transport: http
+  protocol: Streamable HTTP
+  url: https://demand-mcp.app.docketai.com/mcp
+  docs: https://help.docket.io/articles/8225942528-connect-docket-demand-mcp
+
+deployment:
+  mode: remote
+  endpoint: https://demand-mcp.app.docketai.com/mcp
+  install: null
+  package: null
+  auth: oauth
+  verified: probed
+
+# The endpoint was POSTed with a real JSON-RPC tools/list and initialize request on
+# 2026-08-13 and answered HTTP 401 invalid_token, which proves the server is live,
+# reachable and OAuth-gated. It is a hosted remote server only — Docket publishes no
+# stdio package, no npx command and no source repository for it.
+x-evidence:
+  fetched: '2026-08-13'
+  endpoint: https://demand-mcp.app.docketai.com/mcp
+  requests:
+    - method: tools/list
+      http_status: 401
+      body: '{"error": "invalid_token", "error_description": "Authentication failed. The provided bearer token is invalid, expired, or no longer recognized by the server."}'
+    - method: initialize
+      http_status: 401
+  oauth_discovery:
+    - url: https://demand-mcp.app.docketai.com/.well-known/oauth-protected-resource/mcp
+      http_status: 200
+      file: well-known/docketai-oauth-protected-resource.json
+    - url: https://demand-mcp.app.docketai.com/.well-known/oauth-authorization-server
+      http_status: 200
+      file: well-known/docketai-oauth-authorization-server.json
+
+authorization:
+  scheme: OAuth 2.0 bearer (header)
+  authorization_server: https://angelic-precision-36.authkit.app/
+  dynamic_client_registration: true
+  pkce: S256
+  resource_metadata: RFC 9728 (/.well-known/oauth-protected-resource/mcp)
+  note: >-
+    The connection runs as the Docket user who authorizes it and inherits that user's
+    workspace and permissions. Some MCP clients require a workspace owner to enable
+    custom connectors first.
+
+access:
+  mode: read-only
+  quote: >-
+    "Docket Demand MCP only reads data. It cannot create, change, or delete data in
+    Docket. The connection uses the workspace and permissions of the Docket user who
+    authorizes it."
+  source: https://help.docket.io/articles/8225942528-connect-docket-demand-mcp
+
+# tools/list is auth-gated (HTTP 401), so the real tool names and inputSchema could not
+# be read. Docket does not publish a tool list anywhere. What follows is the CAPABILITY
+# SURFACE the help centre states verbatim — it is NOT a tool list and must not be read
+# as one. Tool names and input schemas require authenticated introspection.
+tools: []
+tools_status: gated
+capability_domains:
+  - name: agents
+    quote: 'Docket Demand Capture Agents and their performance'
+  - name: visitors
+    quote: 'Captured visitors and leads'
+  - name: accounts
+    quote: 'Accounts that engaged with your Demand Capture Agents'
+  - name: conversations
+    quote: 'Conversation summaries, qualification status, pain points, and next steps'
+  - name: transcripts
+    quote: 'Transcripts and recordings when your Docket permissions allow access'
+
+clients_documented:
+  - ChatGPT (custom app / developer mode)
+  - Claude (custom connector; individual and Team/Enterprise flows)
+  - any MCP client supporting remote MCP over HTTPS with OAuth
+
+example_prompts:
+  - 'Compare our Demand Capture Agent performance for the last 30 days with the previous 30 days.'
+  - 'How many qualified visitors were captured in the last 30 days? Group them by account.'
+  - 'Summarize conversations from the past seven days and group the common pain points.'
+  - 'Which conversations resulted in booked meetings this month?'
+  - 'Show the recent conversations and next steps for this visitor.'
+
+notes: >-
+  The endpoint URL is also surfaced inside the Docket application at Settings > MCP >
+  Docket Demand MCP > Copy URL; the help centre names
+  https://demand-mcp.app.docketai.com/mcp as "the production server URL". This is
+  Docket's only machine-callable API surface — there is no public REST API, no OpenAPI
+  and no GraphQL endpoint (see x-coverage in apis.yml).

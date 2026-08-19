@@ -1,0 +1,111 @@
+<!-- generated: '2026-08-13' -->
+<!-- method: searched -->
+<!-- source: https://help.docket.io/llms.txt -->
+
+# Docket Knowledge Center
+
+
+## Start Here
+
+- [Getting Started with Docket Marketing Agent](https://help.docket.io/articles/5098230267-getting-started-with-docket-marketing-agent)
+- [Understanding the Agents Dashboard](https://help.docket.io/articles/9136264729-understanding-the-agents-dashboard)
+- [Creating a Marketing Agent](https://help.docket.io/articles/4483099951-creating-a-marketing-agent)
+- [Understanding Active and Draft Agents](https://help.docket.io/articles/2042144646-understanding-active-and-draft-agents)
+- [Previewing an Agent Before Launch](https://help.docket.io/articles/6102777020-previewing-an-agent-before-launch)
+- [Configuring Docket's Multi-Agent Platform](https://help.docket.io/articles/6521590576-configuring-docket-s-multi-agent-platform)
+
+## Configure Agent Behavior
+
+- [Agent Configuration Overview](https://help.docket.io/articles/5350961548-agent-configuration-overview)
+- [Understanding Agent Modes: Voice & Text vs Text Only](https://help.docket.io/articles/3363619713-understanding-agent-modes-voice-text-vs-text-only)
+- [Configuring Persona, Greeting, and Avatar](https://help.docket.io/articles/1198752994-configuring-persona-greeting-and-avatar)
+- [Setting Up Work Hours and Availability](https://help.docket.io/articles/4903864851-setting-up-work-hours-and-availability)
+- [Configuring Agent-to-Human Handoff](https://help.docket.io/articles/5470516559-configuring-agent-to-human-handoff)
+- [Setting Up Agent CTAs](https://help.docket.io/articles/4307707871-setting-up-agent-ctas)
+- [Connecting an External Meeting Scheduler to Your Agent ](https://help.docket.io/articles/9608202739-connecting-an-external-meeting-scheduler-to-your-agent)
+- [Setting Up Dynamic Context Ingestion](https://help.docket.io/articles/5405822937-setting-up-dynamic-context-ingestion)
+- [Archiving and Managing Agent Lifecycle](https://help.docket.io/articles/1329136625-archiving-and-managing-agent-lifecycle)
+- [CTA Behavior Reference](https://help.docket.io/articles/9189409628-cta-behavior-reference)
+- [Controlling Widget Behavior Outside Work Hours](https://help.docket.io/articles/1918275717-controlling-widget-behavior-outside-work-hours)
+- [Setting Up Slack Handoff Notifications](https://help.docket.io/articles/9289744934-setting-up-slack-handoff-notifications)
+- [Setting Up Microsoft Teams Handoff Notifications](https://help.docket.io/articles/7311593433-setting-up-microsoft-teams-handoff-notifications)
+- [Dynamic Context Variable Reference](https://help.docket.io/articles/3995218053-dynamic-context-variable-reference)
+- [Connecting RevenueHero or Calendly to Your Agent](https://help.docket.io/articles/7791491906-connecting-revenuehero-or-calendly-to-your-agent)
+
+## Knowledge and Content
+
+- [Understanding the Knowledge Tab](https://help.docket.io/articles/7747861523-understanding-the-knowledge-tab)
+- [Selecting Knowledge Sources for an Agent](https://help.docket.io/articles/2156552642-selecting-knowledge-sources-for-an-agent)
+- [Managing Global Knowledge Sources](https://help.docket.io/articles/5856616580-managing-global-knowledge-sources)
+- [Uploading Files to Knowledge Sources](https://help.docket.io/articles/8055306756-uploading-files-to-knowledge-sources)
+- [Adding and Managing Web URLs](https://help.docket.io/articles/3472572986-adding-and-managing-web-urls)
+- [Getting Started with Web Ingestion in Docket](https://help.docket.io/articles/7971230104-getting-started-with-web-ingestion-in-docket)
+- [Configuring Slides for Marketing Agent Conversations](https://help.docket.io/articles/1265428420-configuring-slides-for-marketing-agent-conversations)
+- [Configuring Videos for Marketing Agent Conversations](https://help.docket.io/articles/5602354357-configuring-videos-for-marketing-agent-conversations)
+
+## Post-Call Analysis and Automation
+
+- [Understanding Analysis and Actions](https://help.docket.io/articles/1334813133-understanding-analysis-and-actions)
+- [Post-Call Analysis Setup and Configuration](https://help.docket.io/articles/2730244506-post-call-analysis-setup-and-configuration)
+- [Creating Post-Call Analysis Fields](https://help.docket.io/articles/4953792812-creating-post-call-analysis-fields)
+- [Configuring Post-Call Actions](https://help.docket.io/articles/7781326819-configuring-post-call-actions)
+- [Understanding CRM Sync from Analysis and Actions](https://help.docket.io/articles/4457286836-understanding-crm-sync-from-analysis-and-actions)
+- [Setting up the Salesforce CRM for Docket Marketing Agent](https://help.docket.io/articles/6236123447-setting-up-the-salesforce-crm-for-docket-marketing-agent)
+- [Setting up the HubSpot CRM for Docket Marketing Agent](https://help.docket.io/articles/2697208385-setting-up-the-hubspot-crm-for-docket-marketing-agent)
+- [Setting up Marketo integration for Docket Marketing agents](https://help.docket.io/articles/5954903890-setting-up-marketo-integration-for-docket-marketing-agents)
+- [Post-Call Analysis Data Types and Allowed Values](https://help.docket.io/articles/4205789523-post-call-analysis-data-types-and-allowed-values)
+- [Setting Up Post-Call Alerts](https://help.docket.io/articles/9455210537-setting-up-post-call-alerts)
+- [Setting up Human Handoff in Microsoft Teams for Docket Marketing Agent](https://help.docket.io/articles/3086036428-setting-up-human-handoff-in-microsoft-teams-for-docket-marketing-agent)
+
+## Widget Setup
+
+- [Understanding Widget Behavior and Access](https://help.docket.io/articles/3085366933-understanding-widget-behavior-and-access)
+- [Customizing Your Widget Appearance and Branding](https://help.docket.io/articles/8216900062-customizing-your-widget-appearance-and-branding)
+- [Whitelisting Domains for Your Marketing Agent Widget](https://help.docket.io/articles/2477734088-whitelisting-domains-for-your-marketing-agent-widget)
+- [Configuring Widget Behavior and Page Targeting Rules](https://help.docket.io/articles/2953937132-configuring-widget-behavior-and-page-targeting-rules)
+- [Setting up OnClick Trigger for the widget](https://help.docket.io/articles/8236225575-setting-up-onclick-trigger-for-the-widget)
+- [Troubleshooting Widget Not Loading or Displaying](https://help.docket.io/articles/8925890793-troubleshooting-widget-not-loading-or-displaying)
+- [Contextual Callouts: Help Visitors Start the Right Conversation](https://help.docket.io/articles/4973855382-contextual-callouts-help-visitors-start-the-right-conversation)
+- [Privacy and Consent for the Docket Widget](https://help.docket.io/articles/6382003712-privacy-and-consent-for-the-docket-widget)
+
+## Deploy
+
+- [Deploy a Marketing Agent](https://help.docket.io/articles/2773021121-deploy-a-marketing-agent)
+- [Adding the Marketing Agent Script to Your Website](https://help.docket.io/articles/9223178348-adding-the-marketing-agent-script-to-your-website)
+- [Installing the Widget with Google Tag Manager](https://help.docket.io/articles/7209867457-installing-the-widget-with-google-tag-manager)
+- [Installing the Widget Directly in Website HTML](https://help.docket.io/articles/5569275437-installing-the-widget-directly-in-website-html)
+- [Deploying the Agent as a Standalone Page](https://help.docket.io/articles/9297466135-deploying-the-agent-as-a-standalone-page)
+- [Setting Up IP Access Rules for Agent Security](https://help.docket.io/articles/8886582922-setting-up-ip-access-rules-for-agent-security)
+- [Integrating Docket with WordPress, Webflow, and Shopify](https://help.docket.io/articles/1457863814-integrating-docket-with-wordpress-webflow-and-shopify)
+- [Sending Deployment Instructions to a Web Admin](https://help.docket.io/articles/3635263810-sending-deployment-instructions-to-a-web-admin)
+- [Embedding a Standalone Agent with an iframe](https://help.docket.io/articles/8603169175-embedding-a-standalone-agent-with-an-iframe)
+- [How to Validate a Widget Deployment](https://help.docket.io/articles/9308979807-how-to-validate-a-widget-deployment)
+
+## Analytics and Operations
+
+- [Understanding the Marketing Agent Analytics Dashboard](https://help.docket.io/articles/5076275567-understanding-the-marketing-agent-analytics-dashboard)
+- [Reading the Engaged Visitors Table](https://help.docket.io/articles/6822766396-reading-the-engaged-visitors-table)
+- [Selecting an Agent in the Dashboard](https://help.docket.io/articles/7311261978-selecting-an-agent-in-the-dashboard)
+- [Using 7D, 30D, 90D, and Custom Date Ranges](https://help.docket.io/articles/2991027497-using-7d-30d-90d-and-custom-date-ranges)
+- [Filtering Dashboard Visitors](https://help.docket.io/articles/6522892350-filtering-dashboard-visitors)
+- [Exporting Dashboard Data](https://help.docket.io/articles/2315410548-exporting-dashboard-data)
+
+## Admin and Integrations
+
+- [Apps and Integrations Overview](https://help.docket.io/articles/6727181971-apps-and-integrations-overview)
+- [Connect Microsoft Dynamics 365 to Docket Marketing Agents](https://help.docket.io/articles/7250563547-connect-microsoft-dynamics-365-docket)
+- [Connect Docket Demand MCP to ChatGPT, Claude, and Other MCP Clients](https://help.docket.io/articles/8225942528-connect-docket-demand-mcp)
+
+## Developer and Context APIs
+
+- [Passing Context via URL Parameters to Marketing Agents](https://help.docket.io/articles/6670513517-passing-context-via-url-parameters-to-marketing-agents)
+- [Triggering the Widget Programmatically](https://help.docket.io/articles/9681362615-triggering-the-widget-programmatically)
+- [Using the AISeller JavaScript API](https://help.docket.io/articles/9442251006-using-the-aiseller-javascript-api)
+- [Troubleshooting Dynamic Context Not Reaching the Agent](https://help.docket.io/articles/7943500193-troubleshooting-dynamic-context-not-reaching-the-agent)
+- [Passing Form Data to a Marketing Agent](https://help.docket.io/articles/5029852233-passing-form-data-to-a-marketing-agent)
+- [Passing HubSpot Form Submissions to Docket](https://help.docket.io/articles/8122657283-passing-hubspot-form-submissions-to-docket)
+- [Passing Form Context from React or Next.js](https://help.docket.io/articles/1446546551-passing-form-context-from-react-or-next-js)
+- [When and How to Reset Visitor Context](https://help.docket.io/articles/8381362890-when-and-how-to-reset-visitor-context)
+- [When Context Is Sent to the Agent](https://help.docket.io/articles/9875055981-when-context-is-sent-to-the-agent)
+- [Security Guidelines for Passing Visitor Context](https://help.docket.io/articles/4726374778-security-guidelines-for-passing-visitor-context)
+- [Customizing Widget Styling](https://help.docket.io/articles/2022801790-customizing-widget-styling)

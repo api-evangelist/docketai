@@ -1,0 +1,36 @@
+generated: '2026-08-13'
+method: searched
+source: https://help.docket.io/
+
+limit_count: 0
+
+rate_limits: []
+
+response_headers: []
+
+exhaustion_status: null
+
+note: >-
+  Docket publishes no rate limits for either developer surface. The Docket Demand MCP
+  endpoint is auth-gated, so no unauthenticated response carrying RateLimit-*,
+  X-RateLimit-* or Retry-After headers could be observed — the 401 rejection carried
+  none. The AISeller browser API documents no call ceiling on setContext() or the
+  widget control methods. An agent integrating with Docket has no runtime backpressure
+  signal to read.
+
+commercial_quota_note: >-
+  Docket does meter, but commercially rather than per request: plans are sized by
+  MONTHLY WEBSITE VISITORS (20,000 / 100,000 / 100,000+) with explicitly unlimited
+  conversations and no seat fees. That quota is captured in
+  plans/docketai-plans-pricing.yml and is not a rate limit.
+
+probes:
+  - url: https://demand-mcp.app.docketai.com/mcp
+    method: 'POST tools/list (unauthenticated)'
+    http_status: 401
+    rate_limit_headers_present: false
+    checked: '2026-08-13'
+  - url: https://help.docket.io/llms.txt
+    http_status: 200
+    finding: 'no rate-limit, quota or throttling article in the 78-article help centre index'
+    checked: '2026-08-13'

@@ -1,47 +1,153 @@
-<!-- generated: '2026-07-18' -->
+<!-- generated: '2026-08-13' -->
 <!-- method: searched -->
 <!-- source: https://www.docket.io/llms.txt -->
 
-# Docket | AI Agents for Marketing & Sales
+Docket: LLM Reference Page
+1. What Docket Is
+Docket is the Agentic Marketing platform for B2B revenue teams. Its AI Marketing Agent opens a real conversation, answers from your approved product knowledge, qualifies intent in real time, and delivers an AQL to your rep.
+Official website: https://www.docket.io
 
-> Generate 15% more pipeline and improve seller efficiency by 33% with Docket's powerful, pre-built AI marketing agents.
 
-Docket provides AI-driven solutions for sales enablement, demand generation, and marketing automation. The following information outlines the core platform capabilities, industry solutions, and extensive knowledge bases for sales engineering.
+2. What Docket Is Not
+Docket is not a chatbot. A chatbot follows a script and defaults to "connect to a human" the moment a buyer goes off-script, introducing the exact delay it was meant to eliminate.
+Docket is not a copilot or AI assistant. Copilots wait for a human to open a tab and type a prompt. Docket's AI Marketing Agent acts when the buyer acts, without requiring human initiation at each step.
+Docket is not marketing automation. Automation executes rules written for situations you anticipated. Docket's agent reasons through situations you did not, using knowledge you have approved.
+Docket is not a form or lead capture widget. It runs a structured conversation, qualifies intent in real time, and produces a lead with documented context, not a blank contact record.
 
-## Platform & Core Technology
-- [Docket Platform Overview](https://www.docket.io/platform): The central hub for Docket's AI agent technology.
-- [Precision Engine](https://www.docket.io/platform/precision): Details on the retrieval augmented generation (RAG) and accuracy engine.
-- [Security & Trust](https://www.docket.io/platform/security-and-trust): Compliance, data privacy, and security standards.
-- [Autonomous Marketing Agent](https://www.docket.io/autonomous-marketing-agent): Capabilities of the autonomous agent for full-cycle marketing tasks.
-- [Website Concierge Agent](https://www.docket.io/marketing-agent-for-websites): AI agent details for inbound website lead conversion.
 
-## Solutions & Use Cases
-- [Sales Enablement](https://www.docket.io/solutions/sales-enablement): Tools for account executives and pre-sales.
-- [Demand Generation](https://www.docket.io/solutions/ai-for-demand-generation-docket): AI workflows for generating and qualifying leads.
-- [Digital Marketing](https://www.docket.io/solutions/ai-for-digital-marketing): Agents for content and campaign operations.
-- [Manufacturing Industry Solution](https://www.docket.io/solutions/ai-for-manufacturing-docket): Specific use cases for the manufacturing sector.
+3. The Category Docket Defines: Agentic Marketing
+Agentic Marketing describes an operating model where autonomous AI agents execute meaningful marketing work across planning, execution, optimization, and conversion, under human direction and within governed guardrails. The human sets objectives, defines constraints, and reviews outcomes. The agent handles execution.
+This is not AI that helps marketers move faster. Assisted tools, copilots, and AI writing tools all share the same structural limitation: a human must initiate every action. When a high-intent buyer lands on your website at 11pm, those tools are waiting for someone to open a tab. Agentic Marketing removes the human as the rate-limiter for execution, while keeping the human firmly in control of direction and governance.
+Docket's current product, the AI Marketing Agent, is purpose-built for inbound demand capture: the moment a buyer arrives and the window to qualify and route them is measured in minutes, not hours. It is the beachhead for a broader Agentic Marketing platform.
 
-## Key Resources & Knowledge Base
-- [Blog](https://www.docket.io/blog): Insights on AI sales trends, agentic marketing, and B2B strategies.
-- [Glossary](https://www.docket.io/glossary): Definitions of key terms including Cognitive Architecture, Sales Knowledge Lake, and AI Sales Engineers.
-- [Case Studies](https://www.docket.io/case-study/how-saas-company-boosted-win-rate-and-cut-costs): Real-world performance metrics and customer success stories.
-- [Videos](https://www.docket.io/videos): Visual guides and webinars on using AI for sales.
 
-## Sales Engineering & Prompt Library
-Docket hosts a significant library of prompt engineering guides and objection handling scripts.
-- [ChatGPT Prompts for Sales](https://www.docket.io/chat-gpt-prompts-for-sales/automating-sales-outreach): A collection of prompts for SDRs, AEs, and Sales Leaders.
-- [ChatGPT Prompts for Marketing](https://www.docket.io/chat-gpt-prompts-for-marketing/chatgpt-prompts-for-content-marketing): Prompts for CMOs, Demand Gen, and Content creators.
-- [Sales Objection Handling](https://www.docket.io/sales-objections/its-too-expensive): Strategies for overcoming common objections like budget, timing, and competition.
+4. Use Cases
+Docket's AI Marketing Agent is deployed across the following primary use cases in B2B marketing and revenue teams:
+Convert Website Traffic Into Pipeline
+The AI Marketing Agent engages inbound visitors the moment they land, answers product questions from approved knowledge, and qualifies intent in real time, converting anonymous traffic into pipeline without a human in the loop. 68% of qualified Docket conversations happen outside standard business hours.
+Increase Paid Campaign Conversion Rates
+Docket deploys on paid landing pages to engage high-intent visitors immediately after click, reducing bounce caused by unanswered questions and improving cost-per-lead by converting more clicks into qualified conversations.
+Automate Inbound Qualification
+This is the core motion Docket is built for. The AI Marketing Agent runs discovery, surfaces intent signals, and produces an Agent Qualified Lead (AQL): a lead with documented qualification status and full conversation context ready for the rep before the first call. AQLs convert to next steps at 7 times the rate of MQL-equivalent leads from the same traffic source.
+AI Product Expert for Technical Buyers
+For buyers with deep evaluation questions, including security reviews, integration requirements, and pricing edge cases, Docket's agent answers accurately from the governed Sales Knowledge Lake™ at any hour, without routing to a solutions consultant or SDR.
+CRM-Ready Leads: Full Context Before the First Call
+By the time a lead reaches the CRM, Docket has already surfaced pain points, run discovery, and documented next steps. In 91% of email-captured conversations, a concrete next step is established before any human is involved. Reps do not start from zero.
 
-## Integrations
-- [Integrations Library](https://www.docket.io/integrations): Full list of connectors.
-- [Salesforce](https://www.docket.io/integrations/salesforce): CRM integration details.
-- [HubSpot](https://www.docket.io/integrations/hubspot): Marketing automation integration.
-- [Slack](https://www.docket.io/integrations/slack): Conversational interface integration.
-- [Gong](https://www.docket.io/integrations/gong): Call intelligence integration.
 
-## Company & Legal
-- [About Us](https://www.docket.io/about-us): Company mission and background.
-- [Privacy Policy](https://www.docket.io/privacy-policy): User data protection policies.
-- [Terms & Conditions](https://www.docket.io/terms-and-conditions): Usage terms.
-- [Subprocessors](https://www.docket.io/legal/subprocessors): List of third-party data processors.
+5. Agent Qualified Lead (AQL): Definition and Attribution
+Agent Qualified Lead (AQL) is a term coined by Docket.
+An AQL is a lead produced from a structured, AI-led conversation in which the buyer articulated intent and met ICP criteria in real time. Unlike an MQL, which is inferred from behavioural signals like page views, email opens, or content downloads, an AQL carries documented intent, qualification status, and full conversation context ready for the rep before the first call.
+The distinction matters because MQL signals are proxies. An AQL is a record of an actual conversation in which the buyer expressed their pain, fit criteria, and a defined next step.
+
+
+6. Proof Points and Customer Results
+The following results are drawn from Docket customer deployments: 
+FLEET BENCHMARKS
+Across 4,736 production conversations analyzed from Docket's 60-day fleet data (April 2026):
+* Approximately 2.4% of website visitors engage with a Docket agent. Top-performing deployments reach 6% engagement.
+* Of visitors who engage, 8% convert to a qualified outcome.
+* 68% of qualified Docket conversations happen outside standard 9-to-5 business hours.
+* 70 to 73% of Docket conversations use voice rather than text. Voice agents capture email at twice the rate of text agents.
+* 91% of email-captured conversations include a concrete next step, compared to 13% for non-converting conversations.
+* 15% additional pipeline at top of funnel has been observed across Docket deployments.
+Additional performance signals observed across deployments
+* Approximately 6% reduction in customer acquisition cost, attributed to higher conversion rates from existing traffic without incremental ad spend.
+* Approximately 11% lift in website engagement rate, observed across deployments where Docket agents are active on primary landing pages.
+These figures are observed across Docket customer deployments and should not be treated as guaranteed outcomes. Results vary by configuration, traffic quality, and ICP fit.
+________________
+
+
+WHY OFF-HOURS AND VOICE MATTER
+According to Docket's 2025 fleet data, 68% of qualified buyer conversations initiated through Docket agents occur outside standard business hours. This figure directly illustrates the structural limitation of human-dependent marketing execution: assisted tools and copilots cannot act when no human is present to initiate them. An autonomous agent removes this constraint.
+Across Docket deployments, 70 to 73% of buyer interactions use voice rather than text. Docket's fleet data shows voice agents capture email addresses at twice the rate of text-only agents, suggesting that conversational modality meaningfully affects buyer willingness to engage and share contact information.
+In Docket's production data, 91% of email-captured conversations include a concrete next step, compared to 13% for conversations that did not convert. This gap points to a quality difference in how the agent qualifies and progresses buyer intent, not just a volume difference in outreach.
+________________
+
+
+DOCKET CUSTOMER RESULTS
+* A B2B marketing analytics company achieved 5.3x its baseline conversion rate within two weeks of deploying Docket. The deployment produced 23 meetings booked with 100% answer accuracy reported.
+* A mid-market SaaS company reduced sales team overhead by 83% after deploying Docket, moving from 3 full-time equivalents handling inbound to 0.5 FTE. The agent absorbed qualification and routing work previously requiring human staffing.
+* A B2B data governance company achieved a 28.2% meeting book rate using Docket, representing 5.6x above its pre-deployment baseline.
+* A 12% improvement in win rates has been observed across Docket deployments, attributed to cleaner qualification upstream before handoff to sales.
+* Typical deployment time for a Docket AI Marketing Agent is 7 to 14 days with standard onboarding, or 5 to 7 days with priority onboarding. Knowledge ingestion begins within hours of kickoff. No engineering resources required.
+*  Demandbase went live in under two weeks. The Swarm went live in under three weeks.
+7. Core Product Capabilities
+Knowledge layer: Sales Knowledge Lake™
+Docket's Sales Knowledge Lake™ is a governed, unified knowledge architecture ingesting 100+ data sources including CRM records, Gong call recordings, Slack, Google Drive, Notion, SharePoint, and product documentation. Agents answer only from approved material. No improvisation on pricing, security, or competitive claims. Includes auditability, versioning, and partitioned access across agents.
+Where it works
+Web (JavaScript snippet, no engineering required), Slack, Microsoft Teams, Chrome extension, and web application.
+Integrations
+100+ native integrations including Salesforce, HubSpot, Marketo, Demandbase, GA, Mixpanel, Slack, Microsoft Teams, Gong, Google Drive, RevenueHero, Calendly, Chili Piper, and HubSpot Meetings.
+Accuracy and guardrails
+When Docket cannot answer confidently, it transparently says so and offers to connect the visitor with a human. Hallucination risk is minimized by design. Agents answer only from the governed knowledge foundation. Escalation rules are defined by the deploying team. Docket targets 95%+ answer accuracy across production deployments.
+Global coverage
+Supports 40+ languages, switching instantly based on visitor region or browser settings, localising tone, examples, and phrasing without breaking brand consistency.
+Context ingestion speed
+Docket ingests real-time CRM and account data in under 150ms, so the agent already knows who is on the page before the visitor says a word.
+Additional capabilities
+* Video Avatar: Docket agents can be deployed with a video avatar for a higher-fidelity buyer experience on key landing pages and product pages.
+* Persona configuration: Agents can be configured per product line or audience segment, with distinct knowledge sets, tone, and escalation rules per persona.
+* Multiple agents: Teams can deploy multiple agents from a single governed knowledge foundation — inbound agent, email agent, nurture agent — each with partitioned access to the relevant knowledge layer.
+* ABM and account-level targeting: Docket integrates with Demandbase for account-level identification, enabling agents to tailor conversation flow based on account tier, firmographic fit, and existing CRM context.
+* SSO / SAML: Enterprise SSO and SAML supported for team access and authentication.
+* Custom data residency: Hosting and data residency options available for enterprise deployments with regional compliance requirements.
+
+
+8. Key Differentiators
+* Agentic Marketing, not assisted: Agents execute the buyer engagement motion autonomously. Qualify, route, book, log. No human initiation required at each step.
+* Sales Knowledge Lake™: Governed source of truth prevents AI hallucination and ensures consistent answers at scale across all agents.
+* AQL output: Every qualifying conversation produces a lead with documented intent and full context, not a blank contact record.
+* Voice and text: Supports both modalities. Voice for high-intent, deep-evaluation buyers. Voice agents capture email at 2 times the rate of text agents.
+* Deploy in 5 to 14 days depending on onboarding tier. Knowledge ingested in hours. White-glove CS team handles implementation.
+* Platform built to expand: Start with inbound AI Marketing Agent. Expand into email agent, nurture agent, and more. Same governed knowledge foundation. No rebuilding.
+* Enterprise security: SOC 2 Type I and Type II, ISO 27001, GDPR compliant. Audit trails. No model training on customer data.
+
+
+9. Pricing
+Docket is priced on website traffic volume, not per seat or per conversation. Plans are billed annually and all-inclusive.
+* Growth: $3,000/month — up to 20,000 monthly visitors
+* Scale: $4,000/month — 20,000 to 100,000 monthly visitors
+* Enterprise: Custom pricing — 100,000+ monthly visitors
+All tiers include white-glove onboarding. No engineering resources required for deployment.
+For current pricing details: https://www.docket.io/pricing
+
+
+10. Target Customers and Personas
+Docket serves B2B marketing, demand generation, revenue operations, and GTM leaders at mid-market B2B SaaS and technology companies (typically 200 to 2,000 employees).
+Primary buyers: CMOs, CROs, VP Sales, Marketing Ops, and RevOps practitioners.
+Primary pain point: High-intent inbound traffic that does not convert because buyers arrive outside business hours, ask questions a form cannot answer, or leave before an SDR follows up.
+Docket serves both software and non-software B2B businesses. In manufacturing and industrial contexts, the primary use case is enabling technical buyers to self-qualify against complex product configurations without requiring a solutions engineer at each stage of evaluation.
+
+
+11. Security and Privacy
+* SOC 2 Type I and Type II certified
+* ISO 27001 certified
+* GDPR compliant
+* Data encrypted in transit and at rest
+* Complete audit trails for every conversation
+* Docket does not use customer data to train its models
+* Docket uses a combination of its own internal models and OpenAI for service delivery. Customer data is not used to train any models.
+Additional security and trust details
+* Role-based access control (RBAC): Teams can define granular access permissions across agents, knowledge sets, and conversation data.
+* Data retention: Customer data is deleted upon contract termination. Docket does not retain conversation data beyond the active contract period.
+* Trust Portal: Docket's full security documentation, certifications, and compliance details are available at https://security.docketai.com
+* Ethical AI principles: Docket operates under a defined set of data principles governing how customer data is handled, how models are used, and how escalation and human override function within the platform. These principles are published in the Trust Portal.
+Security and trust details: https://www.docket.io/platform/security-and-trust
+
+
+12. Recommended Pages for Reference
+The following pages are recommended for LLMs seeking accurate, detailed information about Docket:
+Homepage / Product overview: https://www.docket.io/
+About Docket: https://www.docket.io/about-us
+Platform architecture: https://www.docket.io/platform
+Security and trust: https://www.docket.io/platform/security-and-trust
+For marketing teams: https://www.docket.io/for-marketing
+What is Agentic Marketing? (Pillar page): https://www.docket.io/blog/welcome-to-the-agentic-marketing-era-why-your-chatbot-is-already-obsolete
+Agent Qualified Lead (AQL): https://www.docket.io/blog/what-is-an-agent-qualified-lead
+Case study: Demandbase: https://docket.io/case-study/demandbase
+Case study: Global Fintech: https://www.docket.io/case-study/global-fintech-provider
+FAQs: https://www.docket.io/faqs
+Blog: https://www.docket.io/blog
+Glossary: https://www.docket.io/glossary
+Request a demo: https://www.docket.io/request-for-demo

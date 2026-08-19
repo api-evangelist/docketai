@@ -1,0 +1,70 @@
+generated: '2026-08-13'
+method: probed
+source: https://demand-mcp.app.docketai.com/mcp
+
+format: oauth2-error
+format_note: >-
+  NOT RFC 9457. The MCP server answers with the OAuth 2.0 / RFC 6750 error object
+  ({error, error_description}) as application/json, not application/problem+json.
+  Docket publishes no error reference page, so this catalogue holds only what was
+  actually observed on the wire plus the one documented client-side result envelope.
+
+envelopes:
+  - id: mcp-oauth-error
+    surface: https://demand-mcp.app.docketai.com/mcp
+    content_type: application/json
+    shape: '{ "error": "<code>", "error_description": "<human-readable remediation>" }'
+  - id: aiseller-result
+    surface: 'window.AISeller (browser)'
+    shape: '{ success: true | false, message: "<human-readable message>" }'
+    note: >-
+      Returned by a RESOLVED promise — failures do not throw, so a try/catch will not
+      see them. Docket's own examples branch on result.success.
+    source: https://help.docket.io/articles/9442251006-using-the-aiseller-javascript-api
+
+problems:
+  - status: 401
+    code: invalid_token
+    title: Bearer token invalid, expired or unrecognised
+    detail: >-
+      "Authentication failed. The provided bearer token is invalid, expired, or no
+      longer recognized by the server. To resolve: clear authentication tokens in your
+      MCP client and reconnect. Your client should automatically re-register and obtain
+      new tokens."
+    remediation: >-
+      Clear the client's stored tokens and reconnect; the client re-runs dynamic client
+      registration against
+      https://angelic-precision-36.authkit.app/oauth2/register and re-authorizes.
+    observed_on:
+      - 'POST /mcp {"jsonrpc":"2.0","id":1,"method":"tools/list"}'
+      - 'POST /mcp {"jsonrpc":"2.0","id":1,"method":"initialize"}'
+    method: probed
+    checked: '2026-08-13'
+
+  - status: 404
+    code: null
+    title: Not Found
+    detail: 'Plain-text body "Not Found" for any unrouted path on the MCP host.'
+    observed_on:
+      - 'GET /'
+      - 'GET /llms.txt'
+      - 'GET /.well-known/openid-configuration'
+    method: probed
+    checked: '2026-08-13'
+
+  - status: null
+    code: context-not-stored
+    title: Visitor context was not stored
+    detail: >-
+      setContext() resolves with success:false and a message when the payload is
+      rejected. Documented rejection causes: nested objects, arrays, files, functions,
+      dates and undefined values — only string, number, boolean and null are accepted.
+    remediation: 'Flatten the payload to scalar values and re-call setContext().'
+    surface: aiseller-result
+    method: searched
+    source: https://help.docket.io/articles/9442251006-using-the-aiseller-javascript-api
+
+gaps:
+  - 'No published error-code reference for the MCP tool layer (tools/list is auth-gated).'
+  - 'No RFC 9457 problem+json anywhere.'
+  - 'No documented error taxonomy for widget/agent runtime failures beyond troubleshooting prose.'

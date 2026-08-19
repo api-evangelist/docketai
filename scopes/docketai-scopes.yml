@@ -1,0 +1,53 @@
+generated: '2026-08-13'
+method: probed
+source: https://demand-mcp.app.docketai.com/.well-known/oauth-authorization-server
+docs: https://help.docket.io/articles/8225942528-connect-docket-demand-mcp
+
+# Read from live RFC 8414 / RFC 9728 metadata. Docket publishes no scopes or
+# permissions reference page; the scopes below are the OIDC/AuthKit baseline the
+# authorization server advertises, not a Docket product-permission vocabulary.
+
+schemes:
+  - name: DocketDemandMCPOAuth
+    source: well-known/docketai-oauth-authorization-server.json
+    issuer: https://angelic-precision-36.authkit.app
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://angelic-precision-36.authkit.app/oauth2/authorize
+        tokenUrl: https://angelic-precision-36.authkit.app/oauth2/token
+      - flow: deviceCode
+        deviceAuthorizationUrl: https://angelic-precision-36.authkit.app/oauth2/device_authorization
+        tokenUrl: https://angelic-precision-36.authkit.app/oauth2/token
+
+scopes:
+  - scope: openid
+    description: OpenID Connect authentication; issue an ID token for the signing-in user.
+    flows: [authorizationCode, deviceCode]
+    sources: [well-known/docketai-oauth-authorization-server.json]
+  - scope: profile
+    description: Basic profile claims for the authorizing Docket user.
+    flows: [authorizationCode, deviceCode]
+    sources: [well-known/docketai-oauth-authorization-server.json]
+  - scope: email
+    description: Email address claim for the authorizing Docket user.
+    flows: [authorizationCode, deviceCode]
+    sources: [well-known/docketai-oauth-authorization-server.json]
+  - scope: offline_access
+    description: Issue a refresh token so the MCP client can keep the connection alive.
+    flows: [authorizationCode, deviceCode]
+    sources: [well-known/docketai-oauth-authorization-server.json]
+
+resource_scopes:
+  resource: https://demand-mcp.app.docketai.com/mcp
+  scopes_supported: []
+  note: >-
+    The RFC 9728 protected-resource document declares an EMPTY scopes_supported array.
+    Docket therefore performs no scope-based authorization at the MCP resource; access
+    is bounded entirely by the authorizing user's Docket workspace role, and the whole
+    server is read-only. An integrator cannot request or reason about a narrower grant.
+
+x-evidence:
+  - url: https://demand-mcp.app.docketai.com/.well-known/oauth-authorization-server
+    http_status: 200
+  - url: https://demand-mcp.app.docketai.com/.well-known/oauth-protected-resource/mcp
+    http_status: 200

@@ -1,0 +1,88 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.docket.io/pricing
+corroborating_source: https://www.docket.io/llms.txt
+
+plan_count: 3
+currency: USD
+billing_period: annual
+metering_unit: monthly website visitors
+metering_note: >-
+  "Docket is priced on website traffic volume, not per seat or per conversation. Plans
+  are billed annually and all-inclusive." The pricing page states "No seat fees. No
+  conversation caps."
+
+plans:
+  - name: Growth
+    price: 3000
+    price_display: '$3,000/month'
+    currency: USD
+    billing_period: month
+    billed: annually
+    included_quota:
+      metric: monthly website visitors
+      limit: 20000
+      comparator: up-to
+    overage: not-published
+    includes:
+      - Marketing Agent
+      - Sales Knowledge Lake
+      - CRM sync (Salesforce / HubSpot)
+      - Meeting booking
+      - Voice, text, slide and video conversations
+      - Implementation
+      - Unlimited conversations
+      - Standard onboarding (7-14 days)
+
+  - name: Scale
+    price: 4000
+    price_display: '$4,000/month'
+    currency: USD
+    billing_period: month
+    billed: annually
+    included_quota:
+      metric: monthly website visitors
+      lower_bound: 20000
+      limit: 100000
+      comparator: range
+    overage: not-published
+    includes:
+      - Everything in Growth
+      - Unlimited data sources
+      - ABM / account-level targeting (Demandbase)
+      - Persona configuration
+      - Multiple agents
+      - Video avatar
+      - Priority onboarding (5-7 days)
+      - Quarterly business reviews
+
+  - name: Enterprise
+    price: null
+    price_display: Custom pricing
+    currency: USD
+    billing_period: not-published
+    billed: not-published
+    included_quota:
+      metric: monthly website visitors
+      lower_bound: 100000
+      comparator: at-least
+    overage: not-published
+    includes:
+      - Everything in Scale
+      - Custom data residency and hosting
+      - SSO / SAML integration
+      - Custom SLA
+      - Executive sponsor
+      - Custom conversation personas per product line
+      - Enhanced training
+
+api_access_note: >-
+  No tier lists API or MCP access as a priced or gated feature. The Docket Demand MCP
+  server is documented in the help centre without a plan restriction, though some MCP
+  clients require a workspace owner to enable custom connectors. SSO/SAML is the only
+  developer-adjacent capability explicitly restricted to Enterprise.
+
+self_serve: false
+self_serve_note: >-
+  There is no self-serve sign-up or free trial. Every tier routes through
+  https://www.docket.io/request-for-demo and includes white-glove onboarding.

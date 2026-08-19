@@ -1,0 +1,87 @@
+generated: '2026-08-13'
+method: searched
+source: https://help.docket.io/
+
+# Docket's product IS an embeddable component: the entire integration story is a
+# JavaScript widget dropped onto the customer's site. There are no server-side SDKs.
+
+families:
+  - name: Marketing Agent widget
+    kind: embeddable conversational agent
+    loader:
+      type: script tag
+      url: null
+      note: >-
+        The loader URL is NOT published. The script is generated per agent inside the
+        Docket application (Marketing Agent Configuration > Deploy > "Add widget to
+        your domain or page" > Copy Script) and Docket instructs customers not to reuse
+        a snippet from another agent or edit the generated script. Because it is
+        unpinned and per-tenant, a consumer cannot tell from outside what version they
+        are loading.
+    global_api: window.AISeller
+    docs: https://help.docket.io/articles/9223178348-adding-the-marketing-agent-script-to-your-website
+    installation_methods:
+      - method: Google Tag Manager
+        detail: Custom HTML tag; Docket recommends firing on all pages and controlling placement with Widget Behaviour settings.
+        docs: https://help.docket.io/articles/7209867457-installing-the-widget-with-google-tag-manager
+      - method: direct website HTML
+        detail: Paste the script near the end of the page body in the site template or CMS.
+        docs: https://help.docket.io/articles/5569275437-installing-the-widget-directly-in-website-html
+      - method: CMS platforms
+        detail: Documented paths for WordPress, Webflow and Shopify.
+        docs: https://help.docket.io/articles/1457863814-integrating-docket-with-wordpress-webflow-and-shopify
+      - method: standalone page
+        detail: Deploy the agent as its own hosted page rather than an overlay.
+        docs: https://help.docket.io/articles/9297466135-deploying-the-agent-as-a-standalone-page
+      - method: iframe
+        detail: Embed a standalone agent with an iframe.
+        docs: https://help.docket.io/articles/8603169175-embedding-a-standalone-agent-with-an-iframe
+    configuration:
+      - domain_whitelisting: https://help.docket.io/articles/2477734088-whitelisting-domains-for-your-marketing-agent-widget
+      - page_targeting: https://help.docket.io/articles/2953937132-configuring-widget-behavior-and-page-targeting-rules
+      - onclick_trigger: https://help.docket.io/articles/8236225575-setting-up-onclick-trigger-for-the-widget
+      - appearance_branding: https://help.docket.io/articles/8216900062-customizing-your-widget-appearance-and-branding
+      - custom_styling: https://help.docket.io/articles/2022801790-customizing-widget-styling
+      - ip_access_rules: https://help.docket.io/articles/8886582922-setting-up-ip-access-rules-for-agent-security
+      - privacy_and_consent: https://help.docket.io/articles/6382003712-privacy-and-consent-for-the-docket-widget
+      - out_of_hours_behavior: https://help.docket.io/articles/1918275717-controlling-widget-behavior-outside-work-hours
+    modalities: [text, voice, slides, video avatar]
+    languages: '40+'
+
+  - name: AISeller JavaScript API
+    kind: client-side control + context API for the widget
+    global_api: window.AISeller
+    docs: https://help.docket.io/articles/9442251006-using-the-aiseller-javascript-api
+    methods:
+      - setContext(data)
+      - resetContext()
+      - show()
+      - hide()
+      - toggle(show)
+      - connect(options)
+      - showAndConnect(options)
+      - hideAndDisconnect()
+    framework_guidance:
+      - react_nextjs: https://help.docket.io/articles/1446546551-passing-form-context-from-react-or-next-js
+      - form_data: https://help.docket.io/articles/5029852233-passing-form-data-to-a-marketing-agent
+      - hubspot_forms: https://help.docket.io/articles/8122657283-passing-hubspot-form-submissions-to-docket
+    detail: see conventions/docketai-conventions.yml
+
+  - name: Chat surfaces
+    kind: hosted apps inside third-party workspaces
+    members:
+      - name: Slack app
+        status: monitored on https://status.docket.io/
+      - name: Microsoft Teams app
+        status: monitored on https://status.docket.io/
+      - name: Chrome extension
+        source: https://www.docket.io/llms.txt
+        note: 'Listed under "Where it works"; no Chrome Web Store listing URL is published.'
+      - name: Web application
+        url: https://app.docketai.com/
+
+notes: >-
+  No npm/CDN-distributed component library exists — the widget is delivered only as a
+  per-agent generated snippet from the Docket application, and Docket's own marketing
+  site does not expose an unobfuscated loader URL to read a version from. Recorded as
+  unpinned and unpublished rather than guessed.

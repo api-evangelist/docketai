@@ -1,0 +1,81 @@
+generated: '2026-08-13'
+method: probed
+source: https://demand-mcp.app.docketai.com/.well-known/oauth-authorization-server
+docs: https://help.docket.io/articles/8225942528-connect-docket-demand-mcp
+
+# Docket ships no OpenAPI, so this profile was not derived from securitySchemes. It was
+# read from the RFC 8414 authorization-server metadata and RFC 9728 protected-resource
+# metadata that the Docket Demand MCP host actually serves, plus the help centre.
+
+summary:
+  types: [oauth2]
+  api_key_in: []
+  oauth2_flows: [authorizationCode, deviceCode, refreshToken]
+  bearer_methods: [header]
+  dynamic_client_registration: true
+  pkce_methods: [S256]
+
+schemes:
+  - name: DocketDemandMCPOAuth
+    type: oauth2
+    applies_to: https://demand-mcp.app.docketai.com/mcp
+    identity_provider: WorkOS AuthKit
+    issuer: https://angelic-precision-36.authkit.app
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://angelic-precision-36.authkit.app/oauth2/authorize
+        tokenUrl: https://angelic-precision-36.authkit.app/oauth2/token
+        pkce: S256
+      - flow: deviceCode
+        deviceAuthorizationUrl: https://angelic-precision-36.authkit.app/oauth2/device_authorization
+        tokenUrl: https://angelic-precision-36.authkit.app/oauth2/token
+      - flow: refreshToken
+        tokenUrl: https://angelic-precision-36.authkit.app/oauth2/token
+    endpoints:
+      registration: https://angelic-precision-36.authkit.app/oauth2/register
+      introspection: https://angelic-precision-36.authkit.app/oauth2/introspection
+      jwks: https://angelic-precision-36.authkit.app/oauth2/jwks
+    token_endpoint_auth_methods: [none, client_secret_post, client_secret_basic]
+    response_types: [code]
+    response_modes: [query]
+    sources:
+      - well-known/docketai-oauth-authorization-server.json
+      - well-known/docketai-oauth-protected-resource.json
+
+protected_resource:
+  resource: https://demand-mcp.app.docketai.com/mcp
+  authorization_servers:
+    - https://angelic-precision-36.authkit.app/
+  bearer_methods_supported: [header]
+  scopes_supported: []
+  spec: RFC 9728
+  source: well-known/docketai-oauth-protected-resource.json
+
+authorization_model:
+  principal: the Docket user who authorizes the connector
+  inherits: that user's Docket workspace and permissions
+  privilege: read-only (the MCP server cannot create, change or delete data)
+  admin_gate: >-
+    Some MCP clients (Claude Team/Enterprise, ChatGPT workspaces) require an
+    organization owner to add the custom connector before individual users may connect.
+  source: https://help.docket.io/articles/8225942528-connect-docket-demand-mcp
+
+application_sign_in:
+  url: https://app.docketai.com/
+  sso: 'SSO / SAML supported on the Enterprise plan only'
+  source: https://www.docket.io/pricing
+
+not_present:
+  - api_key: no API key, secret key or token-issuance surface is documented anywhere
+  - basic_auth: not offered
+  - mutual_tls: not offered
+  - public_rest_api: 'Docket publishes no public REST API, so there is no REST auth model'
+
+x-evidence:
+  - url: https://demand-mcp.app.docketai.com/.well-known/oauth-authorization-server
+    http_status: 200
+  - url: https://demand-mcp.app.docketai.com/.well-known/oauth-protected-resource/mcp
+    http_status: 200
+  - url: https://demand-mcp.app.docketai.com/mcp
+    http_status: 401
+    note: 'unauthenticated JSON-RPC tools/list returned {"error":"invalid_token"}'

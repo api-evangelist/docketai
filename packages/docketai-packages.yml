@@ -1,0 +1,95 @@
+generated: '2026-08-13'
+method: searched
+source: public package registries + https://help.docket.io/ + https://github.com/DocketAI
+
+packages: []
+package_count: 0
+official_sdk_count: 0
+
+finding: >-
+  Docket publishes NO first-party client library on any public registry, in any
+  language. This is consistent with the product: the only integration path is a
+  per-agent JavaScript snippet generated inside the Docket application, and the only
+  machine-callable API is a hosted remote MCP endpoint that MCP clients speak to
+  natively. There is nothing to install. No SDKs pointer is emitted, because emitting
+  one would assert a client-library surface that does not exist.
+
+registries_probed:
+  - registry: npm
+    query: 'docket ai / aiseller'
+    result: 'no first-party package; "docket-agent" and "@roodriigoooo/pi-docket" are unrelated third parties'
+    version: null
+    checked: '2026-08-13'
+  - registry: pypi
+    query: docketai
+    http_status: 404
+    version: null
+    checked: '2026-08-13'
+  - registry: rubygems
+    result: not-found
+    version: null
+    checked: '2026-08-13'
+  - registry: packagist
+    result: not-found
+    version: null
+    checked: '2026-08-13'
+  - registry: crates.io
+    result: not-found
+    version: null
+    checked: '2026-08-13'
+  - registry: nuget
+    result: not-found
+    version: null
+    checked: '2026-08-13'
+  - registry: maven-central
+    result: not-found
+    version: null
+    checked: '2026-08-13'
+  - registry: pkg.go.dev
+    result: not-found
+    version: null
+    checked: '2026-08-13'
+  - registry: cdn
+    target: 'Marketing Agent widget loader'
+    result: >-
+      The widget is distributed as a per-agent snippet copied from the Docket
+      application, not from a public CDN path. No pinned version string is readable
+      from any published URL, so a consumer cannot tell what build they load.
+    version: null
+    checked: '2026-08-13'
+
+github:
+  organization: https://github.com/DocketAI
+  public_repos: 8
+  created: '2023-07-07'
+  first_party: true
+  ownership_evidence: >-
+    The Docket-Curated README describes itself as "Docket's private plugin marketplace
+    for both Codex and Claude Code", and the sibling repos (airship-abm,
+    eightfold-abm-scout, rebrandly-abm, marketo-landing-page) are account-based
+    marketing assets matching Docket's demand-generation product.
+  repos:
+    - name: Docket-Curated
+      description: "Docket's curated Claude Code / Codex plugin marketplace for internal team use"
+      note: 'Internal tooling, not a Docket API client. The Claude Code catalog lists zero plugins; the Codex catalog lists one local plugin.'
+      official: true
+    - name: DocketTalks
+      description: 'Artifacts/information used in Docket presentations'
+      official: true
+    - name: airship-abm
+      official: true
+    - name: eightfold-abm-scout
+      official: true
+    - name: rebrandly-abm
+      official: true
+    - name: marketo-landing-page
+      official: true
+    - name: moltbot-sandbox
+      official: true
+    - name: moltworker
+      description: 'Run OpenClaw on Cloudflare Workers'
+      official: true
+  note: >-
+    None of the eight public repositories is a Docket API client library, an OpenAPI
+    definition, or an MCP server implementation. The org is real and first-party but
+    carries no consumable developer artifact.
