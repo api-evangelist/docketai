@@ -50,6 +50,17 @@ tags:
 - Lead Qualification
 - Go-To-Market
 - MCP
+tags_raw:
+- Company
+- AI Agents
+- Agentic Marketing
+- Sales Enablement
+- Demand Generation
+- Marketing Automation
+- Conversational AI
+- Lead Qualification
+- Go-To-Market
+- MCP
 - Model Context Protocol
 apis:
 - name: Docket Demand MCP
@@ -67,6 +78,11 @@ apis:
   humanURL: https://help.docket.io/articles/8225942528-connect-docket-demand-mcp
   baseURL: https://demand-mcp.app.docketai.com/mcp
   tags:
+  - MCP
+  - Demand Generation
+  - Analytics
+  - Conversational AI
+  tags_raw:
   - MCP
   - Model Context Protocol
   - Demand Generation
