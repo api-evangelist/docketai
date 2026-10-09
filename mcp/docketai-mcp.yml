@@ -77,3 +77,17 @@ notes: The endpoint URL is also surfaced inside the Docket application at Settin
   MCP > Copy URL; the help centre names https://demand-mcp.app.docketai.com/mcp as "the production server
   URL". This is Docket's only machine-callable API surface — there is no public REST API, no OpenAPI and
   no GraphQL endpoint (see x-coverage in apis.yml).
+rfc9728:
+  endpoint: https://demand-mcp.app.docketai.com/mcp
+  metadata_url: https://demand-mcp.app.docketai.com/.well-known/oauth-protected-resource/mcp
+  discovered_via: WWW-Authenticate resource_metadata on an anonymous POST initialize
+  fetched: '2026-09-25'
+  http_status: 200
+  content_type: application/json
+  document:
+    resource: https://demand-mcp.app.docketai.com/mcp
+    authorization_servers:
+    - https://angelic-precision-36.authkit.app
+    scopes_supported: []
+    bearer_methods_supported:
+    - header
