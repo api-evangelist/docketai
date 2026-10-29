@@ -1,4 +1,4 @@
-# Docketai
+# Docket
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,6 +64,123 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Docketai is a company surfaced as a portfolio company of mayfield and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Docket (docket.io, formerly Docket AI on docketai.com) is an Agentic Marketing platform for B2B revenue teams. Its AI Marketing Agent engages inbound website visitors in real voice or text conversations, answers from approved product knowledge, qualifies intent in real time and produces an Agent Qualified Lead (AQL) with full conversation context. The governed Sales Knowledge Lake ingests 100+ data sources — CRM records, Gong calls, Slack, Google Drive, Notion, SharePoint, Intercom and product documentation — and the agent supports 40+ languages. Docket deploys as a per-agent JavaScript snippet with no engineering work, and syncs to the go-to-market stack through native Salesforce, HubSpot, Marketo, Microsoft Dynamics 365, Demandbase, Zoom and Google Calendar connectors. Docket publishes NO public REST API and no OpenAPI, but it does ship two real developer surfaces: the Docket Demand MCP server, a hosted read-only remote MCP endpoint at demand-mcp.app.docketai.com/mcp secured by OAuth 2.0 with dynamic client registration; and the window.AISeller browser JavaScript API for passing visitor context into an agent. The company raised a $15M Series A and is backed by Mayfield.
 
-Backed by: mayfield — https://docketai.com
+**Areas:** Company · AI Agents · Agentic Marketing · Sales Enablement · Demand Generation · Marketing Automation · Conversational AI · Lead Qualification · Go-To-Market · MCP
+
+## Docket on APIs.io
+
+Everything profiled for Docket is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/docketai/](https://apis.io/providers/docketai/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Docket Demand MCP](https://apis.io/apis/docketai/docket-demand-mcp/) — Docket's hosted, read-only remote Model Context Protocol server. It exposes Demand Capture Agents and their performance, captured visitors and leads,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Docket Demand MCP](https://apis.io/servers/docketai/docket-demand-mcp/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Docketai Authentication](https://apis.io/security/docketai/docketai-authentication/)
+- [Docketai Domain Security](https://apis.io/security/docketai/docketai-domain-security/)
+- [Docketai Trust Center](https://apis.io/security/docketai/docketai-trust-center/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Docketai Scopes](https://apis.io/scopes/docketai/docketai-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Docketai Plans Pricing](https://apis.io/plans/docketai/docketai-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Docketai Rate Limits](https://apis.io/rate-limits/docketai/docketai-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.docket.io/)
+- [Documentation](https://help.docket.io/)
+- [Getting started](https://help.docket.io/articles/5098230267-getting-started-with-docket-marketing-agent)
+- [API reference](https://help.docket.io/articles/9442251006-using-the-aiseller-javascript-api)
+- [Pricing](https://www.docket.io/pricing)
+- [Support](https://help.docket.io/)
+- [Blog](https://www.docket.io/blog)
+- [Compliance](https://www.docket.io/platform/security-and-trust)
+- [Trust centre](https://security.docketai.com/)
+- [Terms of service](https://www.docket.io/terms-and-conditions)
+- [Privacy policy](https://www.docket.io/privacy-policy)
+- [GitHub](https://github.com/DocketAI)
+- [Status](https://status.docket.io/)
+
+## API Evangelist rating
+
+**Kin Score 40.9** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 47.6 |
+| Access clarity | 85.5 |
+
+**Agent readiness 32.7** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 39.2** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/docketai/](https://apis.io/providers/docketai/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Docket: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/docketai/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
